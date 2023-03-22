@@ -1,4 +1,4 @@
-# Base v2.0.0
+# BASE v2.0.0
 
 ### I made this program to help make sqlite3 less conplicated to use
 
@@ -10,7 +10,7 @@ $git clone "paste clone link here without qoutes"
 ```
 ---
 
-# How to use sqlite3 term
+# How to use BASE v2.0.0
 
 ## 1. first import the package
 ```python
