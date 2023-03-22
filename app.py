@@ -1,6 +1,6 @@
 from base import base
 
-
+# base
 
 # db = base.Database('people.db')
 # db.create_table('workers','firstName text,lastName text')
