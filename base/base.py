@@ -65,3 +65,11 @@ class Database:
 			return data
 		except sqlite3.Error as e:
 			print(f"Error viewing data: {e}")
+
+	def get_tables_names(self, table_name):
+		try:
+			self.c.execute(f"SELECT * FROM {table_name}")
+			data = list(map(lambda x: x[0], self.c.description))
+			return data
+		except sqlite3.Error as e:
+			return (f"Error: {e}")
