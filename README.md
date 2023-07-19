@@ -62,3 +62,13 @@ db.view_data('workers','rowid, firstName, lastName')
 db.view_data('workers',  where_clause = "rowid = 1")
 db.view_data('workers','firstName',  where_clause= "lastName = 'Smith'")
 ```
+
+# v2.1.0
+
+### New feature: get column names
+
+```python
+# db.view_data(table_name)
+db.get_tables_names("workers")
+# output: ["firstName", "lastName"]
+```
