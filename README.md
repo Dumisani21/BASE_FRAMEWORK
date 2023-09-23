@@ -1,6 +1,6 @@
 # BASE v2.0.0
 
-### I made this program to help make sqlite3 less conplicated to use
+### I made this program to help make sqlite3 less complicated to use
 
 ## How to download Base.
 
