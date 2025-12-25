@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "base-orm"
+version = "3.0.0"
+description = "A professional, production-ready ORM for Python with SQLite support"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "BASE ORM Contributors"}
+]
+keywords = ["orm", "database", "sqlite", "sql", "models", "query-builder"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Database",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/BASE_FRAMEWORK"
+Documentation = "https://github.com/yourusername/BASE_FRAMEWORK#readme"
+Repository = "https://github.com/yourusername/BASE_FRAMEWORK"
+"Bug Tracker" = "https://github.com/yourusername/BASE_FRAMEWORK/issues"
+
+[project.scripts]
+base = "base.cli:main"
+
+[tool.setuptools]
+packages = ["base"]
+
+[tool.setuptools.package-data]
+base = ["py.typed"]

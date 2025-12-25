@@ -1,6 +1,37 @@
 import sqlite3
+import warnings
+
 
 class Database:
+	"""
+	Legacy Database class for backward compatibility with BASE v2.x.
+	
+	DEPRECATED: This class is deprecated and will be removed in v4.0.
+	Please migrate to the new ORM-based API:
+	
+	Old way (v2.x):
+		from base import base
+		db = base.Database('people.db')
+		db.create_table('workers', 'firstName text, lastName text')
+		db.insert_data('workers', ('John', 'Smith'))
+	
+	New way (v3.x):
+		from base import Model, CharField, Database
+		
+		class Worker(Model):
+			firstName = CharField(max_length=100)
+			lastName = CharField(max_length=100)
+		
+		db = Database('people.db')
+		db.connect()
+		Worker._create_table()
+		
+		worker = Worker(firstName='John', lastName='Smith')
+		worker.save()
+	
+	See documentation for full migration guide.
+	"""
+
 
 	def __init__(self, db_name):
 		try:
